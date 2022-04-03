@@ -61,12 +61,18 @@ namespace PruebaNuevosConceptos_Zbrun_
 
         //Punto 6 : Crear un método de extensión que retorne una fecha en formato DateTime a partir de un string
         //(si se genera una excepción por mal formato retornar el MinValue del tipo de datos).
-        //public static DateTime RetornarDatetimeAPartirDeString(this string Fecha)
-        //{
-        //    string[] fechas = Fecha.Split(' ');
-        //    DateTime fechaRetornar = new DateTime(fechas[0], fechas[1], fechas[2]);
-        //    return fechaRetornar;
-        //}
+        public static DateTime RetornarDatetimeAPartirDeString(this string Fecha)
+        {           
+            try
+            {
+                DateTime fechaRetornar = DateTime.Parse(Fecha);
+                return fechaRetornar;
+            }
+            catch (Exception)
+            {
+                return DateTime.MinValue;
+            }
+        }
 
         //Punto 7
         public static string RetornarStringInvertido(this string mensaje)
