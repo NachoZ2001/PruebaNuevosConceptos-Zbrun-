@@ -18,10 +18,10 @@ namespace PruebaNuevosConceptos_Zbrun_
         }
 
         //Punto 3
-        //public static decimal CalcularDiferenciaFechas(this DateTime fecha1, DateTime fecha2)
-        //{
-
-        //}
+        public static double CalcularDiferenciaFechas(this DateTime fecha1, DateTime fecha2)
+        {
+            return (fecha1 - fecha2).TotalSeconds / 60;
+        }
 
         //Punto 4 
         public static double RetornarPromedioExtension(this List<int> enteros)
