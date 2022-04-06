@@ -1,25 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\soyre\\Desktop\\FACULTAD\\FACULTAD NACHO\\3er Año\\PROGRAMACION II\\PruebaNuevosConceptos-Zbrun\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-.csproj": {}
+    "E:\\REPOSITORIOS\\ucse-practica4\\zbrun\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-.csproj": {}
   },
   "projects": {
-    "C:\\Users\\soyre\\Desktop\\FACULTAD\\FACULTAD NACHO\\3er Año\\PROGRAMACION II\\PruebaNuevosConceptos-Zbrun\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-.csproj": {
+    "E:\\REPOSITORIOS\\ucse-practica4\\zbrun\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\soyre\\Desktop\\FACULTAD\\FACULTAD NACHO\\3er Año\\PROGRAMACION II\\PruebaNuevosConceptos-Zbrun\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-.csproj",
+        "projectUniqueName": "E:\\REPOSITORIOS\\ucse-practica4\\zbrun\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-.csproj",
         "projectName": "PruebaNuevosConceptos-Zbrun-",
-        "projectPath": "C:\\Users\\soyre\\Desktop\\FACULTAD\\FACULTAD NACHO\\3er Año\\PROGRAMACION II\\PruebaNuevosConceptos-Zbrun\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-.csproj",
-        "packagesPath": "C:\\Users\\soyre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\soyre\\Desktop\\FACULTAD\\FACULTAD NACHO\\3er Año\\PROGRAMACION II\\PruebaNuevosConceptos-Zbrun\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-\\obj\\",
+        "projectPath": "E:\\REPOSITORIOS\\ucse-practica4\\zbrun\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "E:\\REPOSITORIOS\\ucse-practica4\\zbrun\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-\\PruebaNuevosConceptos-Zbrun-\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\soyre\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,7 +57,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

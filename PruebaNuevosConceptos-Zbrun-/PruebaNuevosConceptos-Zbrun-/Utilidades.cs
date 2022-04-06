@@ -7,14 +7,14 @@ namespace PruebaNuevosConceptos_Zbrun_
         public static int CalcularCantidadPalabrasExtension(this string mensaje)
         {           
             string [] palabras = mensaje.Split(' ');        
-            return palabras.Count();
+            return palabras.Count(); //podria ser una sola linea
         }
 
         //Punto 2
         public static int CalcularCantidadPalabrasExtension(this string mensaje, char separador)
         {
             string[] palabras = mensaje.Split(separador);
-            return palabras.Count();
+            return palabras.Count(); //podria ser una sola linea
         }
 
         //Punto 3
@@ -24,13 +24,13 @@ namespace PruebaNuevosConceptos_Zbrun_
         }
 
         //Punto 4 
-        public static double RetornarPromedioExtension(this List<int> enteros)
+        public static double RetornarPromedioExtension(this List<int> enteros) //no poner en los nombres los tipos de datos
         {
             return enteros.Average();
         }
 
         //Punto 5: 
-        public static int RetornarSumaParesPorRestaImparesExtension(this List<int> enteros)
+        public static int RetornarSumaParesPorRestaImparesExtension(this List<int> enteros) //no poner en los nombres los tipos de datos
         {
             List<int> pares = new List<int>();
             List<int> impares = new List<int>();
@@ -48,6 +48,9 @@ namespace PruebaNuevosConceptos_Zbrun_
             int sumaPares = pares.Sum();
             int sumaImpares = RetornarRestaImpares(impares);
             return sumaPares * sumaImpares;
+
+            //Utilizar lambdas para minimizar cantidad de lineas
+            //sumaImpares = lista.Where(x=> x% 2 == 0).Sum(); Primero filtra los pares y luego los suma
         }
         public static int RetornarRestaImpares(this List<int> impares)
         {
@@ -66,7 +69,7 @@ namespace PruebaNuevosConceptos_Zbrun_
             try
             {
                 DateTime fechaRetornar = DateTime.Parse(Fecha);
-                return fechaRetornar;
+                return fechaRetornar; // puede ser una sola linea
             }
             catch (Exception)
             {
@@ -83,6 +86,7 @@ namespace PruebaNuevosConceptos_Zbrun_
                 mensajeInvertido = letra + mensajeInvertido;
             }
             return mensajeInvertido;
+            //Revisar el metodo Reverse del tipo de datos string
         }
 
         //Punto 8 
@@ -94,22 +98,25 @@ namespace PruebaNuevosConceptos_Zbrun_
                 retornarString = retornarString + separador + elemento;
             }
             return retornarString;
+            //Revisar string.Join()
         }
 
         //Punto 9 
-        public static bool EsCorreoElectronico(string correo)
+        public static bool EsCorreoElectronico(string correo) //NO es un metodo de extension OJO!
         {
             string patronCorreo = @"^[a-zA-Z\.\-_]+@^([a-zA-Z\.\-_]+\.)+[a-zA-Z{2,4}]$";
             Regex rgxCorreo = new Regex(patronCorreo);
             return (rgxCorreo.IsMatch(correo));
+            //se puede escribir en menos lineas
         }
 
         //Punto 10  
-        public static bool EsCuit(string cuit)
+        public static bool EsCuit(string cuit) //NO es un metodo de extension OJO!
         {
             string patronCuit = @"^([20|23|24|27|30|33|34])([0-9]{8})([0-9]{1})";
             Regex rgxCuit = new Regex(patronCuit);
             return rgxCuit.IsMatch(cuit);
+            //se puede escribir en menos lineas
         }
 
         //Punto 13 : Crear un método de extensión que reste dos números enteros.
