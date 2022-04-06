@@ -5,16 +5,14 @@ namespace PruebaNuevosConceptos_Zbrun_
     {
         //Punto 1
         public static int CalcularCantidadPalabrasExtension(this string mensaje)
-        {           
-            string [] palabras = mensaje.Split(' ');        
-            return palabras.Count(); //podria ser una sola linea
+        {
+            return mensaje.Split(' ').Count();
         }
 
         //Punto 2
         public static int CalcularCantidadPalabrasExtension(this string mensaje, char separador)
         {
-            string[] palabras = mensaje.Split(separador);
-            return palabras.Count(); //podria ser una sola linea
+            return mensaje.Split(separador).Count();
         }
 
         //Punto 3
@@ -24,33 +22,15 @@ namespace PruebaNuevosConceptos_Zbrun_
         }
 
         //Punto 4 
-        public static double RetornarPromedioExtension(this List<int> enteros) //no poner en los nombres los tipos de datos
+        public static double RetornarPromedioExtension(this List<int> numeros) 
         {
-            return enteros.Average();
+            return numeros.Average();
         }
 
-        //Punto 5: 
-        public static int RetornarSumaParesPorRestaImparesExtension(this List<int> enteros) //no poner en los nombres los tipos de datos
-        {
-            List<int> pares = new List<int>();
-            List<int> impares = new List<int>();
-            foreach (int entero in enteros)
-            {
-                if (entero % 2 == 0)
-                {
-                    pares.Add(entero);
-                }
-                else
-                {
-                    impares.Add(entero);
-                }
-            }
-            int sumaPares = pares.Sum();
-            int sumaImpares = RetornarRestaImpares(impares);
-            return sumaPares * sumaImpares;
-
-            //Utilizar lambdas para minimizar cantidad de lineas
-            //sumaImpares = lista.Where(x=> x% 2 == 0).Sum(); Primero filtra los pares y luego los suma
+        //Punto 5 
+        public static int RetornarSumaParesPorRestaImparesExtension(this List<int> numeros) 
+        {           
+            return (numeros.Where(x => x % 2 != 0).Sum()) * (numeros.Where(x => x % 2 != 0).Sum());
         }
         public static int RetornarRestaImpares(this List<int> impares)
         {
@@ -62,14 +42,12 @@ namespace PruebaNuevosConceptos_Zbrun_
             return resta;
         }
 
-        //Punto 6 : Crear un método de extensión que retorne una fecha en formato DateTime a partir de un string
-        //(si se genera una excepción por mal formato retornar el MinValue del tipo de datos).
+        //Punto 6 
         public static DateTime RetornarDatetimeAPartirDeString(this string Fecha)
         {           
             try
             {
-                DateTime fechaRetornar = DateTime.Parse(Fecha);
-                return fechaRetornar; // puede ser una sola linea
+                return DateTime.Parse(Fecha);
             }
             catch (Exception)
             {
@@ -80,46 +58,30 @@ namespace PruebaNuevosConceptos_Zbrun_
         //Punto 7
         public static string RetornarStringInvertido(this string mensaje)
         {
-            string mensajeInvertido = "";
-            foreach (char letra in mensaje)
-            {
-                mensajeInvertido = letra + mensajeInvertido;
-            }
-            return mensajeInvertido;
-            //Revisar el metodo Reverse del tipo de datos string
+            return mensaje.Reverse().ToString();           
         }
 
         //Punto 8 
-        public static string RetornarArrayStringsComoString(string[] strings, char separador)
+        public static string RetornarArrayStringsComoString(string[] palabras, char separador)
         {
-            string retornarString = "";
-            foreach (string elemento in strings)
-            {
-                retornarString = retornarString + separador + elemento;
-            }
-            return retornarString;
-            //Revisar string.Join()
+            return string.Join(separador, palabras);
         }
 
         //Punto 9 
-        public static bool EsCorreoElectronico(string correo) //NO es un metodo de extension OJO!
+        public static bool EsCorreoElectronico(this string correo) 
         {
             string patronCorreo = @"^[a-zA-Z\.\-_]+@^([a-zA-Z\.\-_]+\.)+[a-zA-Z{2,4}]$";
-            Regex rgxCorreo = new Regex(patronCorreo);
-            return (rgxCorreo.IsMatch(correo));
-            //se puede escribir en menos lineas
+            return new Regex(patronCorreo).IsMatch(correo);
         }
 
         //Punto 10  
-        public static bool EsCuit(string cuit) //NO es un metodo de extension OJO!
+        public static bool EsCuit(this string cuit) 
         {
             string patronCuit = @"^([20|23|24|27|30|33|34])([0-9]{8})([0-9]{1})";
-            Regex rgxCuit = new Regex(patronCuit);
-            return rgxCuit.IsMatch(cuit);
-            //se puede escribir en menos lineas
+            return new Regex(patronCuit).IsMatch(cuit);
         }
 
-        //Punto 13 : Crear un método de extensión que reste dos números enteros.
+        //Punto 13 
         public static int RetornarRestaDosEnteros(this int entero1, int entero2)
         {
             return entero1 - entero2;
